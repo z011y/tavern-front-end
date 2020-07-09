@@ -75,20 +75,20 @@ export default function Search() {
     return filteredGigs;
   };
 
-  const gigList = () => {
-    return filteredGigs.map((gig) => {
-      return (
-        <Gig
-          key={gig.id}
-          name={gig.name}
-          genre={gig.genre}
-          img={gig.img}
-          onClick={() => setActive(gig.id)}
-          active={active === gig.id}
-        />
-      );
-    });
-  };
+  // const gigList = () => {
+  //   return filteredGigs.map((gig) => {
+  //     return (
+  //       <Gig
+  //         key={gig.id}
+  //         name={gig.name}
+  //         genre={gig.genre}
+  //         img={gig.img}
+  //         onClick={() => setActive(gig.id)}
+  //         active={active === gig.id}
+  //       />
+  //     );
+  //   });
+  // };
 
   let activeGig = gigs.find((element) => element.id === active);
 
@@ -99,7 +99,7 @@ export default function Search() {
         <Content>
           <Column>
             <Label>Results</Label>
-            <Gigs>{gigList()}</Gigs>
+            <Gigs></Gigs>
           </Column>
           <Column>
             <Label>Artist Details</Label>
