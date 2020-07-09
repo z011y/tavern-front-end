@@ -1,0 +1,56 @@
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Arvo", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+li {
+  list-style: none;
+}
+
+::selection {
+  background-color: #ffcc4d;
+  color: white;
+}
+
+button {
+  font-family: "Arvo", sans-serif;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus,
+button:active {
+  outline: none;
+}
+
+input {
+  font-family: "Arvo", sans-serif;
+}
