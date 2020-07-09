@@ -63,17 +63,16 @@ export default function Search() {
     },
   ];
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (value) => {
     console.log("submitted");
-    // Router.push("/dashboard/search");
-    // let filteredGigs = [];
-    // gigs.map((gig) => {
-    //   if (gig.name.toLowerCase().includes(value.toLowerCase())) {
-    //     filteredGigs.push(gig);
-    //   }
-    // });
-    // return filteredGigs;
+    Router.push("/dashboard/search");
+    let filteredGigs = [];
+    gigs.map((gig) => {
+      if (gig.name.toLowerCase().includes(value.toLowerCase())) {
+        filteredGigs.push(gig);
+      }
+    });
+    return filteredGigs;
   };
 
   const gigList = () => {
@@ -96,12 +95,7 @@ export default function Search() {
   return (
     <Layout>
       <Container>
-        <Heading
-          title="Search Results"
-          handleSubmit={() => {
-            handleSubmit(e);
-          }}
-        />
+        <Heading title="Search Results" handleSubmit={handleSubmit} />
         <Content>
           <Column>
             <Label>Results</Label>

@@ -1,11 +1,9 @@
 import styled from "styled-components";
 import Link from "next/link";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
 
 export default function Heading({ title, handleSubmit }) {
   const [value, setValue] = useState("");
-  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -13,14 +11,15 @@ export default function Heading({ title, handleSubmit }) {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(value);
+    // handleSubmit(e, value);
+    console.log("this feature is still under construction");
   };
 
   return (
     <HeadingWrapper>
       <img src="/tavern-icon-wht.svg" alt="" />
       <h1>{title}</h1>
-      <Form onSubmit={() => dispatch({ type: "SUBMIT_QUERY_SEARCH" })}>
+      <Form onSubmit={onSubmit}>
         <SearchBar
           placeholder="Search available artists"
           value={value}
